@@ -56,18 +56,24 @@ namespace Exercice1
             }
             */
             //Assignment 1.4
-            for(int i =1; i<256; i++)
-            {
-                String hexValue = i.ToString("X");
-                if (i < 10) { 
-                Console.Write(i);
-                }
-                if (i > 9) {                  
-                Console.Write(hexValue);
-                    Console.Write("    ");
-                }
+            /* for(int i =1; i<256; i++)
+             {
+                 String hexValue = i.ToString("X");
+                 if (i < 10) { 
+                 Console.Write(i);
+                 }
+                 if (i > 9) {                  
+                 Console.Write(hexValue);
+                     Console.Write("    ");
+                 }
 
+             }*/
+            CLBirdie birdie = new CLBirdie();
+            for (int i = 0; i < 100; i++)
+            {
+                Console.WriteLine(birdie.makeSomeNoise());
             }
+            
             Console.ReadKey();
         }
     }

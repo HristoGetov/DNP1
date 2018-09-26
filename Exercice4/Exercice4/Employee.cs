@@ -4,12 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Exercice3
+namespace Exercice4
 {
-   public abstract class Employee
+    abstract class Employee
     {
-
-        private String name;
+              private String name;
         public String Name
         {
             get { return name; }
@@ -20,6 +19,9 @@ namespace Exercice3
             this.name = name;
         }
         public abstract double getMonthSalary();
-        
+        public abstract String toString();
+
     }
 }
+    
+

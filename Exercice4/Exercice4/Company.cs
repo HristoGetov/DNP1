@@ -4,21 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Exercice3
+namespace Exercice4
 {
-    public class Company
+    class Company
     {
         private List<Employee> employees = new List<Employee>();
-
-    
 
         public Company()
         {
         }
-
-        public double getMontlySalaryTotal(){
+        public double getMontlySalaryTotal()
+        {
             double totalsalaries = 0.0;
-            for(int i=0; i < employees.Count; i++)
+            for (int i = 0; i < employees.Count; i++)
             {
                 totalsalaries += employees[i].getMonthSalary();
             }
@@ -28,7 +26,10 @@ namespace Exercice3
         {
             employees.Add(employee);
         }
-
-    
+        public void addPartTimeStudent(PartTimeStudent student)
+        {
+            employees.Add(student);
+        }
+       
     }
 }

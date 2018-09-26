@@ -7,18 +7,19 @@ using System.Threading.Tasks;
 namespace Exercice3
 {
    
-    class PartTimeEmployee:Employee
+    public class PartTimeEmployee:Employee
     {
-        public double HourlyWage { get; set; }
-        public int HoursPerMonth { get; set; }
+        private double hourlyWage;
+        private int hoursPerMonth;
+       
         public PartTimeEmployee(String name, double hourlyWage, int hoursperMonth) : base(name)
         {
-            HourlyWage = hourlyWage;
-            HoursPerMonth = hoursperMonth;
+            this.hourlyWage = hourlyWage;
+            this.hoursPerMonth = hoursperMonth;
         }
         public  override double getMonthSalary()
         {
-            return HourlyWage + HoursPerMonth;
+            return (hourlyWage * hoursPerMonth);
         }
 
        

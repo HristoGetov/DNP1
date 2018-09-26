@@ -4,18 +4,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Exercice3
+namespace Exercice4
 {
-    public class FulTimeEmployee : Employee
+    class FullTimeEmployee:Employee
     {
         public double monthlySalary { get; set; }
-        public FulTimeEmployee(string name, double monthlySalary) : base(name)
+        public FullTimeEmployee(string name, double monthlySalary) : base(name)
         {
             this.monthlySalary = monthlySalary;
         }
         public override double getMonthSalary()
         {
             return monthlySalary;
+        }
+        public override string toString()
+        {
+            return "Employee's name: " + base.Name + "\nEmployee's salary: " + getMonthSalary();
         }
     }
 }
